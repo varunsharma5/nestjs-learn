@@ -7,6 +7,7 @@ import {
   Patch,
   Post,
   Query,
+  UploadedFile,
 } from '@nestjs/common';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
@@ -19,10 +20,10 @@ export class TasksController {
 
   @Get()
   getTasks(@Query() filterDto: GetTasksFilterDto): Task[] {
-    if (Object.keys(filterDto).length) {
-      return this.tasksService.getTaskWithFilter(filterDto);
+    if(Object.keys(filterDto).length) {
+      return UploadedFile;
     } else {
-      return this.tasksService.getAllTasks();
+    return this.tasksService.getAllTasks();
     }
   }
 

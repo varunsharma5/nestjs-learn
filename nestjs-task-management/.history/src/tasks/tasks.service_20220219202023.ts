@@ -25,6 +25,7 @@ export class TasksService {
         if (task.title.includes(search) || task.description.includes(search)) {
           return true;
         }
+
         return false;
       });
     }

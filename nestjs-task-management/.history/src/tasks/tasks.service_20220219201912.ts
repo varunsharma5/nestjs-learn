@@ -24,8 +24,9 @@ export class TasksService {
       tasks = tasks.filter((task) => {
         if (task.title.includes(search) || task.description.includes(search)) {
           return true;
+        } else {
+          return false;
         }
-        return false;
       });
     }
     return tasks;
